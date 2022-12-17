@@ -478,7 +478,7 @@ export default function Home() {
             {/* if the user has not yet connected their wallet, show a connect button */}
             {!address && <button onClick={connect}>Connect</button>}
             {/* if the user has connected their wallet but has not yet authenticated, show them a login button */}
-            {address && { handle } ? (
+            {address && handle && { handle } ? (
               <h2>{handle}</h2>
             ) : (
               <div onClick={createProfileRequest}>
