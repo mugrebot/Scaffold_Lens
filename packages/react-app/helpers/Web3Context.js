@@ -24,7 +24,7 @@ const { ethers } = require("ethers");
 export const Web3Context = React.createContext({});
 
 // provider Component that wraps the entire app and provides context variables
-export function Web3Provider({ children, network = "localhost", DEBUG = true, NETWORKCHECK = true, ...props }) {
+export function Web3Provider({ children, network = "mumbai", DEBUG = true, NETWORKCHECK = true, ...props }) {
   // for Nextjs Builds, return null until "window" is available
   if (!global.window) {
     return null;
@@ -35,7 +35,7 @@ export function Web3Provider({ children, network = "localhost", DEBUG = true, NE
   const [address, setAddress] = useState();
 
   /// 📡 What chain are your contracts deployed to?
-  const targetNetwork = NETWORKS[network]; // <------- select your target frontend network (localhost, rinkeby, xdai, mainnet)
+  const targetNetwork = NETWORKS["mumbai"]; // <------- select your target frontend network (localhost, rinkeby, xdai, mainnet)
 
   // 🛰 providers
   const scaffoldEthProvider = useMemo(() => {
@@ -95,6 +95,7 @@ export function Web3Provider({ children, network = "localhost", DEBUG = true, NE
               1: `https://mainnet.infura.io/v3/${INFURA_ID}`, // mainnet // For more WalletConnect providers: https://docs.walletconnect.org/quick-start/dapps/web3-provider#required
               42: `https://kovan.infura.io/v3/${INFURA_ID}`,
               100: "https://dai.poa.network", // xDai
+              137: "https://polygon-rpc.com",
             },
           },
         },

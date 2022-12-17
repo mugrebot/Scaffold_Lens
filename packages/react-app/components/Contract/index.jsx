@@ -4,6 +4,7 @@ import { useContractExistsAtAddress, useContractLoader } from "eth-hooks";
 import Account from "../Account";
 import DisplayVariable from "./DisplayVariable";
 import FunctionForm from "./FunctionForm";
+import { ethers } from "ethers";
 
 const noContractDisplay = (
   <div>
@@ -67,7 +68,9 @@ export default function Contract({
   const address = contract ? contract.address : "";
   const contractIsDeployed = useContractExistsAtAddress(provider, address);
 
+
   const displayedContractFunctions = useMemo(() => {
+    console.log(contract);
     const results = contract
       ? Object.values(contract.interface.functions).filter(
           fn => fn.type === "function" && !(show && show.indexOf(fn.name) < 0),
@@ -135,7 +138,7 @@ export default function Contract({
         style={{ marginTop: 25, width: "100%" }}
         loading={contractDisplay && contractDisplay.length <= 0}
       >
-        {contractIsDeployed ? contractDisplay : noContractDisplay}
+        {contractDisplay}
       </Card>
     </div>
   );

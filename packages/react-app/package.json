@@ -60,7 +60,7 @@
     "@next/eslint-plugin-next": "^11.1.2",
     "@testing-library/dom": "^6.12.2",
     "@types/react": "^16.9.19",
-    "autoprefixer": "^10.3.6",
+    "autoprefixer": "^10.4.13",
     "chalk": "^4.1.0",
     "eslint": "^7.5.0",
     "eslint-config-airbnb": "^18.2.0",
@@ -78,11 +78,11 @@
     "gulp-postcss": "^9.0.0",
     "ipfs-http-client": "^45.0.0",
     "less-plugin-npm-import": "^2.1.0",
-    "postcss": "^8.3.8",
+    "postcss": "^8.4.19",
     "prettier": "^2.0.5",
     "s3-folder-upload": "^2.3.1",
     "surge": "^0.21.5",
-    "tailwindcss": "^2.2.16"
+    "tailwindcss": "^3.2.4"
   },
   "eslintConfig": {
     "extends": "react-app"

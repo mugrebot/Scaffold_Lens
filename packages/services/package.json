@@ -14,5 +14,9 @@
     "run-graph-node": "cd graph-node && docker-compose up",
     "remove-graph-node": "cd graph-node && docker-compose down",
     "clean-graph-node": "rm -rf graph-node/data/"
+  },
+  "dependencies": {
+    "@apollo/client": "^3.7.2",
+    "graphql": "^16.6.0"
   }
 }

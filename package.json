@@ -66,5 +66,7 @@
       "**/hardhat-ts/**"
     ]
   },
-  "dependencies": {}
+  "dependencies": {
+    "@lens-protocol/react-native-lens-ui-kit": "^0.0.5"
+  }
 }
